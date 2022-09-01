@@ -5,7 +5,7 @@ session_start();
 ?>
 
 <<<<<<< HEAD
-<!------ Nagana na 2 pangalawa 3 ------->
+<!------ Nagana na 2 pangalawa 3 456 ------->
 
 =======
 <!-- testing ulit -->
