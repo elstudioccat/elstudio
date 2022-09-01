@@ -4,7 +4,7 @@ session_start();
 
 ?>
 
-<!------ Nagana na 2 ------->
+<!------ Nagana na 2 pangalawa ------->
 
 
 <?php
