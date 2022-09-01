@@ -4,6 +4,12 @@ session_start();
 
 ?>
 
+<<<<<<< HEAD
+<!------ Nagana na 2 pangalawa 3 456 ------->
+
+=======
+<!-- testing ulit -->
+>>>>>>> af939c661d415df68b49784a5cf55de0be45c23f
 
 <?php
   require_once 'includes/header.php';
