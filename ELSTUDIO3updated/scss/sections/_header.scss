@@ -1,0 +1,49 @@
+@use '../components/animations';
+
+.header-container {
+    position: relative;
+    
+    h1 {
+        animation: slide-up 1.4s ease;
+    }
+
+    p {
+        animation: slide-up 1.6s ease;
+    }
+
+    button {
+        animation: slide-up 1.9s ease;
+        
+    }
+
+    p , h1{
+        font-family: 'Monserrat', sans-serif;
+    }
+
+}
+
+.custom-shape-divider-bottom-1660651674 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1660651674 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 200x;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1660651674 .shape-fill {
+    fill: #FF911E;
+}
+
+
+
+

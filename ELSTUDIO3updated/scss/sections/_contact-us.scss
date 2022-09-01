@@ -1,0 +1,58 @@
+@use'../custom' as *;
+
+.contact_container {
+    position: relative;
+  
+    h1{
+        color: $bg3;
+    }
+
+    h1 , p, label {
+        font-family: 'Monserrat', sans-serif;
+    }
+
+
+    .contact-info {
+        margin-top: 1rem;
+        padding-left: 4rem;
+
+     i {
+        padding-right: 1rem;
+     }
+
+    }
+    .contact-form{
+        padding-left: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .row-contact {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+}
+
+/******* Wavy background *****/
+
+
+.custom-shape-divider-bottom-1660647572 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1660647572 svg {
+    position: relative;
+    overflow: hidden;
+    width: calc(100% + 1.3px);
+    height: 120px;
+}
+
+.custom-shape-divider-bottom-1660647572 .shape-fill {
+    fill: #FF911E;
+}

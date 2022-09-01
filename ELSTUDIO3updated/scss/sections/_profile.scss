@@ -1,0 +1,116 @@
+@use '../custom' as *;
+
+
+
+
+/******* Container ********/
+
+.profile-container {
+    margin-top: 4rem;
+}
+
+.borrow-container {
+    margin-top: 4rem;
+}
+
+.schedule-container {
+    margin-top: 4rem;
+}
+
+.download-container {
+    margin-top: 4rem;
+}
+
+/* -------SIDEBAR FOR ALL------- */
+.sidebar{ /* the sidebar */
+    overflow-y: auto;
+  }
+  .nav-item a, /* the button tab's color */
+  .nav-item button{
+    color: #212529;
+  }
+  .outer{ /* profile photo div */
+    position: relative;
+  }
+  .inner { /* upload button div */
+    background-color: rgb(192, 192, 192);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  .inputfile { /* upload button */
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+  }
+  /* -------END OF SIDEBAR------- */
+  
+  /* --------ALL FORMS, BUTTONS, AND SPAN - DESIGN--------- */
+  .qr:hover, /*  qr btn */
+  .nav-link:hover, /* PROFILE TAB (about and transaction history) - button hover effect */
+  .nav-item.active a, /* sibebar tab active */
+  .nav-item button:hover, /* sidebar tab hover effect */
+  .nav-item .nav-link[aria-selected="true"], /* PROFILE TAB(about and transaction history) - active button*/
+  .modal-footer button, /* modal buttons  */
+  .modal-footer button:hover, /* modal buttons hover effect */
+  .appoint button:hover, /* SCHEDULE TAB - appointment button hover effect */
+  .input-group-text, /* BORROW TAB - select option bar and search bar */
+  .borrow, /* BORROW TAB - borrow button */
+  .borrow:hover, /* BORROW TAB - borrow button hover effect */
+  .inner:hover, /* SIDE BAR - upload button hover effect */
+  .appoint button /* SCHEDULE TAB - appointment button */{
+    color: white;
+      background-color: #df7630; 
+  }
+  .qr:hover, /* qr button effect */
+  .notify:hover, /* nofication email hover effect */
+  .d-flex .nav-link:hover /* SIDEBAR tabs hover effect */{
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  span{ /* all span */
+    color: #df7630;
+  } /* all forms */
+  .form-control:focus,
+  .form-select:focus {
+      border-color: #df7630;
+      box-shadow: 0 0 0 2px #df7630;
+  }
+  /* -------------- END OF ALL FORMS, BUTTONS, AND SPAN------------------ */
+  
+  
+  /* ------(SCHEDULE AND BORROW TAB) - BUTTONS ------ */
+  .appoint button:hover, /* appointment btn of sched tab*/
+  .borrow:hover /* borrow button of borrow tab */{ 
+    transform: scale(1.1);
+  }
+  
+  /* ----------(BORROW TAB) - FIXED HEADER----------- */
+  .theader,
+  .theader th{ 
+      background-color: #df7630;
+      color: white;
+      position: sticky;
+      top: 0;
+  }
+  
+  /* -----------(PROFILE TAB) - NOTIFICATION---------- */
+  .notify{ /* divs */
+    position: relative;
+    font-weight: bolder;
+  }
+  .notify button{ /* mark as read buttons */
+    top: 0;
+    display: none;
+    z-index: 1;
+    width: 200px;
+    height: 100%;
+    border: 0;
+  }
+  .notify:hover button,
+  .notify:hover button span{ /* buttons color design */
+    display: block;
+    color: white;
+      background-color: #df7630; 
+  }

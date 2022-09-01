@@ -1,0 +1,136 @@
+@use'../custom' as *;
+
+.resources_container{
+    padding-top: 5rem;
+
+    h1 {
+        color: $bg3;
+    }
+
+    h1, h2 {
+        font-family: 'Monserrat', sans-serif;
+    }
+
+}
+
+
+/*** Second page ***/
+
+
+.facilities {
+
+
+    h2 , p {
+        font-family: 'Monserrat' sans-serif;
+    }
+    
+    h2 {
+        color: $bg3;
+    }
+
+    .image-content {
+        background: whitesmoke;
+                box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+        margin-top: 5rem;
+    }
+
+ 
+    .virtual-lab {
+
+        .facilities-carousel img:hover{
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.3);
+    
+        }
+
+    }
+
+    .elearning-lab {
+
+        .facilities-carousel img:hover{
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.3);
+    
+        }
+
+    }
+
+
+    .mini-broadcasting-lab {
+
+        .facilities-carousel img:hover{
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.3);
+    
+        }
+
+    }
+    
+
+}
+
+
+.resources-tab {
+
+
+    .resources-tab-container {
+        padding-top: 5rem;
+        height: 100vh;
+        margin-bottom: 10rem;
+
+
+        .nav-pills{
+            padding-top: 1rem;
+            background: $bg2;
+            padding: 0;
+            height: 100vh;
+
+         .title-header {
+            background: $bg3;
+            height:  4rem;
+            padding-top: 15px;
+
+         }
+
+         .nav-link {
+            font-weight: 500;
+         }
+         
+
+        }
+
+        .tab-content {
+            background: $bg2;
+            height: 100vh;
+            width: 100%;
+
+            .resources-content {
+                padding: 30px;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                background: whitesmoke;
+                box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+            }
+         }
+
+         .search-bar {
+            background: $bg3;
+            height: 3rem;
+            
+
+            .input-group{
+                width: 400px;
+                padding-left: 3px;
+            }
+        
+         }
+
+    }
+
+    
+}
+

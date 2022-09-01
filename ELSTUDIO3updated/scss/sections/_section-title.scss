@@ -1,0 +1,52 @@
+@use'../custom' as *;
+
+
+
+.section-title a{
+  text-decoration: none;
+  color: $gray-600;
+}
+
+.section-title h5 {
+  color: $bg3;
+}
+
+.section-title h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: $bg3;
+}
+  
+  .section-title h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  .section-title h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: $bg3;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+
+  .section-title a:hover{
+    color: $bg3;
+    transition: all ease-in-out 0.4s;
+  }
+
+  
+  
