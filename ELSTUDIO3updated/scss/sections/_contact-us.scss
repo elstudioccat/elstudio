@@ -56,3 +56,39 @@
 .custom-shape-divider-bottom-1660647572 .shape-fill {
     fill: #FF911E;
 }
+
+
+
+/***** Second Page *******/
+
+
+.container-contact {
+    margin-top: 5rem;
+    h1{
+        color: $bg3;
+    }
+
+    h1 , p, label {
+        font-family: 'Monserrat', sans-serif;
+    }
+
+
+    .contact-info {
+        margin-top: 1rem;
+        padding-left: 4rem;
+
+     i {
+        padding-right: 1rem;
+     }
+
+    }
+    .contact-form{
+        padding-left: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .row-contact {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+}

@@ -11574,6 +11574,32 @@ i {
   fill: #FF911E;
 }
 
+/***** Second Page *******/
+.container-contact {
+  margin-top: 5rem;
+}
+.container-contact h1 {
+  color: #ff911e;
+}
+.container-contact h1, .container-contact p, .container-contact label {
+  font-family: "Monserrat", sans-serif;
+}
+.container-contact .contact-info {
+  margin-top: 1rem;
+  padding-left: 4rem;
+}
+.container-contact .contact-info i {
+  padding-right: 1rem;
+}
+.container-contact .contact-form {
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+.container-contact .row-contact {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
 footer {
   background: linear-gradient(to right, rgba(52, 58, 64, 0.7), rgba(52, 58, 64, 0.85));
   color: #fff;
