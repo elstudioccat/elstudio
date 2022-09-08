@@ -1,10 +1,12 @@
-<!doctype html>
+
 <?php
 
 session_start();
 
 ?>
 
+
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -36,7 +38,9 @@ session_start();
                   <span class="bi bi-person-circle" style="color: white; "></span>
               </button>
               </div>
+              <a href='../includes/logout.inc.php'>
               <button class="btn mx-3" style="background-color: #df7630; color: white;" type="button">logout</button>
+              </a>
         </header>
   
         
@@ -46,19 +50,44 @@ session_start();
                 <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="height: 100vh; background-color: rgba(0, 0, 0, .1);">
                     <div class="d-flex flex-column position-sticky pt-4" style="height:90vh; margin: 10vh 0 0 0;">
                         <div class="outer mx-auto d-block"> <!-- the profile pic section -->
-                            <img src="student.webp" class="rounded-circle mx-auto d-block" alt="" width="150" height="150"/>
+                                         <?php
+                                            require_once '../includes/config.php';
+                                            $id = $_SESSION["id"];
+                                            $query = " select * from users where id = '$id'";
+                                            $result = mysqli_query($conn, $query);   
+                                            while ($data = mysqli_fetch_assoc($result)) {
+                                                if($data['filename'] === ""){
+                                                 ?>
+                                                 <img src="student.webp" class="rounded-circle mx-auto d-block" alt="" width="150" height="150"/>
+                                                <?php
+                                                }else{
+                                                    ?>
+                                                    <img src="./uploadss/<?php echo $data['filename']; ?>" class="rounded-circle mx-auto d-block" alt="" width="150" height="150"/>
+                                                   <?php
+                                                }
+                                            }
+                                        ?>
                             <div class="inner position-absolute bottom-0 end-0"> <!-- the upload button-->
-                                <div class="position-absolute top-50 start-50 translate-middle">
-                                    <input class="inputfile" type="file" name="pic" accept="image/*" title="">
-                                    <label>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
-                                            <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
-                                        </svg>
-                                    </label>
-                                </div> 
-                            </div>
-                        </div>
+                                            <div class="position-absolute top-50 start-50 translate-middle">
+                                             <form method="POST" id="imageupload" enctype="multipart/form-data" action="uploadpic.php">
+                                                <input class="inputfile" type="file" id="file" name="uplods" accept="image/*" class="custom-file-input">
+                                               <script type="text/javascript">
+
+                                                    document.getElementById("file").onchange = function() {
+                                                    document.getElementById("imageupload").submit();
+
+                                                   };
+                                                </script>
+                                                <label>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                                        <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                        <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+                                                    </svg>
+                                                </label>
+                                             </form>
+                                            </div> 
+                                        </div>
+                             </div>
                         
                         <hr>
                         <!-- categories-->
@@ -109,16 +138,33 @@ session_start();
                             </div>
 
                             <div class="modal-body" style="text-align:center;">
-                                <svg class="center-block" xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
-                                    <path d="M2 2h2v2H2V2Z"/>
-                                    <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z"/>
-                                    <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z"/>
-                                    <path d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z"/>
-                                    <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z"/>
-                                </svg>
+                            <?php     
+                                    // Include the qrlib file
+                                    include 'phpqrcode/qrlib.php';
+                                    $text = $_SESSION["id"];
+                                    
+                                    // $path variable store the location where to 
+                                    // store image and $file creates directory name
+                                    // of the QR code file by using 'uniqid'
+                                    // uniqid creates unique id based on microtime
+                                    $path = './imagess/';
+                                    $file = $path.$_SESSION["Fname"].$_SESSION["Lname"].".png";
+                                    
+                                    // $ecc stores error correction capability('L')
+                                    $ecc = 'L';
+                                    $pixel_Size = 8;
+                                
+                                    // Generates QR Code and Stores it in directory given
+                                    QRcode::png($text, $file, $ecc, $pixel_Size);
+                                    
+                                    // Displaying the stored QR code from directory
+                                    echo "<center><img src='".$file."'></center>";
+       
+                            ?>
                             </div>
 
-                            <div class="modal-footer">
+                            <div class="modal-footer justify-content-between">
+                                <a class="btn btn-primary mr-auto" href="<?=$file?>" download>Download QR</a>
                                 <button type="button" class="btn border-0" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
@@ -134,8 +180,16 @@ session_start();
                         <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                             <!-- the name and position -->
                             <div class=" pt-3 pb-2 mb-3">
-                                <h1 class="h2 fw-bolder">Surname, First Name M.I.</h1>
-                                <h5 class="h5">Student</h5>
+                                <h1 class="h2 fw-bolder"><?php echo $_SESSION["Lname"].", ".$_SESSION["Fname"];?></h1>
+                                <h5 class="h5"> <?php
+                                    if ($_SESSION["status"] === 1){
+                                        echo "Student";
+
+                                    }elseif ($_SESSION["status"] === 2){
+                                        echo "Faculty";
+                                    }    
+                                    ?>    
+                                </h5>
                             </div>
 
                             <div class="row mb-2 g-5">
@@ -220,29 +274,49 @@ session_start();
                                                     </tbody>
                                                 </table> -->
                                                 <div class="form-floating mb-3 border-bottom">
-                                                    <input type="text" readonly class="form-control-plaintext" id="idnummber" value="201810888">
+                                                    <input type="text" readonly class="form-control-plaintext" id="idnummber" value=<?php echo $_SESSION["id"];?>>
                                                     <label for="idnumber">ID Number</label>
                                                 </div>
                                                 <div class="form-floating mb-3 border-bottom">
-                                                    <input type="text" readonly class="form-control-plaintext" id="address" value="Phase 1 Section 4 Block 53 Lot 2 Belvedere Towne, Paradahan, Tanza, Cavite">
+                                                    <input type="text" readonly class="form-control-plaintext" id="address" value=<?php echo $_SESSION["address"];?>>
                                                     <label for="address">Address</label>
                                                     <button class="editbtn btn btn-link position-absolute top-50 end-0 translate-middle-y" >Edit</button>
                                                 </div>
                                                 <div class="form-floating mb-3 border-bottom">
-                                                    <input type="email" readonly class="form-control-plaintext" id="email" value="name.surname@cvsu.edu.ph">
+                                                    <input type="email" readonly class="form-control-plaintext" id="email" value=<?php echo $_SESSION["email"];?>>
                                                     <label for="email">Email</label>
                                                     <button class="editbtn btn btn-link position-absolute top-50 end-0 translate-middle-y" >Edit</button>
                                                 </div>
-                                                <div class="form-floating mb-3 border-bottom">
-                                                    <input type="text" readonly class="form-control-plaintext" id="course" value="Bachelor of Science in Computer Science">
-                                                    <label for="course">Course</label>
-                                                    <button class="editbtn btn btn-link position-absolute top-50 end-0 translate-middle-y" >Edit</button>
-                                                </div>
-                                                <div class="form-floating mb-3 border-bottom">
-                                                    <input type="text" readonly class="form-control-plaintext" id="year" value="2018-2022">
-                                                    <label for="year">Academic Year</label>
-                                                    <button class="editbtn btn btn-link position-absolute top-50 end-0 translate-middle-y" >Edit</button>
-                                                </div>
+
+                                            
+                                            <?php         
+                                                 $dept = $_SESSION["dept"];
+                                                 $course = $_SESSION["course"];
+                                                 $year = $_SESSION["year"];
+
+
+                                                if ($_SESSION["status"] === 1)
+                                                {
+                                                        echo "<div class='form-floating mb-3 border-bottom'>";
+                                                        echo "<input type='text' readonly class='form-control-plaintext' id='course' value='$course'>";
+                                                        echo "<label for='course'>Course</label>";
+                                                        echo "<button class='editbtn btn btn-link position-absolute top-50 end-0 translate-middle-y' >Edit</button>";
+                                                        echo "</div>";
+                                                        echo "<div class='form-floating mb-3 border-bottom'>";
+                                                        echo "<input type='text' readonly class='form-control-plaintext' id='year' value='$year'>";
+                                                        echo "<label for='year'>Academic Year</label>";
+                                                        echo "<button class='editbtn btn btn-link position-absolute top-50 end-0 translate-middle-y' >Edit</button>";
+                                                        echo "</div>";
+                                                }elseif ($_SESSION["status"] === 2){
+                                                        echo "<div class='form-floating mb-3 border-bottom'>";
+                                                        echo "<input type='text' readonly class='form-control-plaintext' id='dprmnt' value='$dept'>";
+                                                        echo "<label for='dprmnt'>Department</label>";
+                                                        echo "<button class='editbtn btn btn-link position-absolute top-50 end-0 translate-middle-y' >Edit</button>";
+                                                        echo "</div>";
+
+                                                }    
+                                            ?>
+
                                                 <script type="text/javascript">
                                                     $(document).ready(function () {
                                                         $('.editbtn').click(function () {

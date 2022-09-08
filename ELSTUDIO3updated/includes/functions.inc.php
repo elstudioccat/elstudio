@@ -161,13 +161,13 @@ function loginUser($conn, $username, $pwd){
             exit();
         }
         else if( $_SESSION["status"] === 1 ){
-            header("location: ../profile.php");
+            header("location: ../userprofile/userprofile.php");
             exit();
         }else if($_SESSION["status"] === 3){
             header("location: ../admin/admin.php");
             exit();
         } else if( $_SESSION["status"] === 2 ){
-            header("location: ../profile.php");
+            header("location: ../userprofile/userprofile.php");
             exit();
         }
     }
