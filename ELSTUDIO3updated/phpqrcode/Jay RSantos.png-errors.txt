@@ -1330,3 +1330,111 @@
 <b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
 <br />
 <b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2022-09-08 04:36:56: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2022-09-08 04:54:31: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>G:\xampp\htdocs\elstudio\ELSTUDIO3updated\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
