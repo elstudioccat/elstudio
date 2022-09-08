@@ -1,0 +1,23 @@
+@use'../custom' as *;
+
+.contact_container {
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    margin-top: 5rem;
+    min-height: 25rem;
+    
+    .contact-info {
+        margin-top: 1rem;
+        padding-left: 4rem;
+
+     i {
+        padding-right: 1rem;
+     }
+
+    }
+    .contact-form{
+        padding-left: 2rem;
+        margin-top: 1rem;
+    }
+}

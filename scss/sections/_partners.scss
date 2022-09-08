@@ -1,0 +1,44 @@
+@use'../custom' as *;
+
+
+
+.partners_container {
+    min-height: 40rem;
+    background:  $bg3;
+}
+
+    .logo-list {
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        height: auto;
+    }
+
+    .logo-list img {
+        display: inline-block;
+        max-width: 80%;
+        padding: 40px 0;
+        transition: all 0.3s ease-in-out;
+        -webkit-filter: grayscale(100);
+        -moz-filter: grayscale(100);
+        filter: grayscale(100);
+        
+    }
+
+    .logo-list img:hover {
+        filter: none;
+        transform: scale(1.2);
+        -webkit-filter: none;
+        -moz-filter: none;
+    }
+
+    .logo-list .row-container{
+        margin-top: 5rem;
+    
+    }
+
+
+    
+
+    
+ 

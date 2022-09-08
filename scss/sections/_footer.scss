@@ -1,0 +1,30 @@
+@use'../custom' as *;
+@use'../components/mixins' as *;
+
+footer {
+    @include gradient;
+    color: $white;
+
+    h6{
+        color: $bg3;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        transition: all 0.3s ease-in-out;
+    }
+    
+    img:hover {
+        filter: none;
+        transform: scale(1.2);
+        -webkit-filter: none;
+        -moz-filter: none;
+    }
+
+
+}
+
+

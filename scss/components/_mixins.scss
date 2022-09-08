@@ -1,0 +1,12 @@
+@use'../custom' as *;
+
+// Gradient mixin
+
+@mixin gradient {
+    background: linear-gradient(to right, rgba($bg1, 0.70), rgba($bg1,0.85));
+}
+
+@mixin button-bg {
+    background: linear-gradient(to right, rgba($black, 0.70), rgba($black,0.85));
+    
+}

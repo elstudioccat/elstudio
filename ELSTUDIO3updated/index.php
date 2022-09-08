@@ -819,6 +819,8 @@
                 
             }else if($_GET["error"] == "waitforadminaproval"){
               echo "<script type='text/javascript'>alert('Wait for admin approval!');</script>";
+            }else if($_GET["error"] == "emailalreadyused"){
+              echo "<script type='text/javascript'>alert('Id number or Email already used, please use another!');</script>";
             }
         }
 ?>
