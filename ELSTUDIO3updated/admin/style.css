@@ -1,426 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-:root {
-    --grey: #eee;
-    --white: #fff;
-    --green: green;
-    --black: #000000;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
-    background-color: var(--grey);
-    position: relative;
-}
-/* SIDE BAR STYLING*/
-.sidebar {
-    background-color: var(--white);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 220px;
-    padding: 6px 15px;
-    z-index: 3;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
-.sidebar.active {
-    width: 50px;
+html {
+  height: -webkit-fill-available;
 }
+/*  */
 
-.sidebar.active .logo-content .logo {
-    display: none;
+/* ----------THE NAVBAR----------- */
+.navbar{
+  background-color: #353535;
 }
+/* ------------END OF NAVBAR----------- */
 
-.sidebar .logo-content #btn {
-   position: absolute;
-   left: 85%;
-   top: 22px;
-   height: 50px;
-   color: var(--black);
-   font-size: 20px;
-   cursor: pointer;
-}
 
-.sidebar.active #btn {
-    left: 40%;
-}
 
-.sidebar .logo-content .logo {
-    display: flex;
-    height: 50px;
-    width: 100%;
-    align-items: center;  
-    transition: all ease .5s;
-}
-
-.sidebar .logo-content .logo i {
-    color: var(--green);
-    font-size: 28px;
-    padding: 0 10px;
-    font-weight: bold;
-}
-
-.sidebar .logo-content .logo .logo-name {
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.sidebar ul {
-    margin-top: 20px;
-    margin-left: -28px;
-}
-
-.sidebar ul li {
-    position: relative;
-    list-style: none;
-    margin: 25px 0;
-    padding: 10px;
-    width: 100%;
-}
-
-.sidebar ul li .tool {
-    position: absolute;
-    left: 35px;
-    top: 17px;
-    width: 122px;
-    padding: 5px 8px;
-    border-radius: 5px;
-    text-align: center;
-    transform: translateY(-50%);
-    background: var(--white);
-    color: var(--green);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    display: none;
-     z-index: 1;
-}
-
-.sidebar ul li a {
-    display: flex;
-    text-decoration: none;
-    color: var(--green);
-    text-align: center;
-    
-}
-
-.sidebar ul li a span {
- margin-left: 30px;
- transition: all ease .5s;
-}
-
-.sidebar.active ul li a span {
-    display: none;
-}
-.sidebar.active ul li a i:hover {
-  color: var(--green);
-}
-
-.sidebar.active ul li {
-    margin-top: 50px;
-    padding: 5px;
-    margin-left: -8px;
-}
-
-.sidebar.active ul li:hover {
-    background: none;
-    color: var(--green);
-}
-
-.sidebar.active ul li:hover .tool {
-    display: block;
-}
-
-.sidebar ul li:hover {
-    background-color: var(--green);
-    
-}
-
-.sidebar ul li:hover span, .sidebar ul li:hover a i {
-    color: var(--white);
-    text-align: center;
-}
-/* HEADER STYLING*/
-header {
+/* -------SIDEBAR FOR ALL------- */
+.sidebar{ /* the sidebar */
   position: fixed;
-  width: 100%;
+  top: 0;
+  overflow-y: auto;
+}
+.nav-item a, /* the button tab's color */
+.nav-item button{
+  color: #212529;
+}
+.outer{ /* profile photo div */
+  position: relative;
+}
+.inner { /* upload button div */
+  background-color: rgb(192, 192, 192);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.inputfile { /* upload button */
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
   height: 50px;
-  background-color: var(--white);
-  margin-top: -25px;
-  z-index: 2;
+}
+/* -------END OF SIDEBAR------- */
+
+/* --------ALL FORMS, BUTTONS, AND SPAN - DESIGN--------- */
+.qr:hover, /*  qr btn */
+.nav-link:hover, /* PROFILE TAB (about and transaction history) - button hover effect */
+.nav-item button:hover, /* sidebar tab hover effect */
+.nav-item .nav-link[aria-selected="true"], /* PROFILE TAB(about and transaction history) - active button*/
+.modal-footer button, /* modal buttons  */
+.modal-footer button:hover, /* modal buttons hover effect */
+.appoint button:hover, /* SCHEDULE TAB - appointment button hover effect */
+.input-group-text, /* BORROW TAB - select option bar and search bar */
+.borrow, /* BORROW TAB - borrow button */
+.borrow:hover, /* BORROW TAB - borrow button hover effect */
+.inner:hover, /* SIDE BAR - upload button hover effect */
+.appoint button, /* SCHEDULE TAB - appointment button */
+.card-body button,
+.card-body button:hover,
+.details .btn{
+  color: white;
+	background-color: #df7630; 
+}
+.qr:hover, /* qr button effect */
+.notify:hover, /* nofication email hover effect */
+.d-flex .nav-link:hover /* SIDEBAR tabs hover effect */{
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+span{ /* all span */
+  color: #df7630;
+} /* all forms */
+.form-control:focus,
+.form-select:focus {
+    border-color: #df7630;
+    box-shadow: 0 0 0 2px #df7630;
+}
+/* -------------- END OF ALL FORMS, BUTTONS, AND SPAN------------------ */
+
+
+/* ------(SCHEDULE AND BORROW TAB) - BUTTONS ------ */
+.appoint button:hover, /* appointment btn of sched tab*/
+.borrow:hover, /* borrow button of borrow tab */
+.card-body button:hover{ 
+  transform: scale(1.1);
 }
 
-.header .header-text {
-  font-size: larger;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  padding: 15px 60px;
+/* ----------(BORROW TAB) - FIXED HEADER----------- */
+.theader,
+.theader th{ 
+    background-color: #df7630;
+    color: white;
+    position: sticky;
+    top: 0;
 }
 
-.header .header-text p {
-  text-align: center;
+/* -----------(PROFILE TAB) - NOTIFICATION---------- */
+.notify{ /* divs */
+  position: relative;
 }
-
-.header .header-text p span {
-  color: var(--green);
+.notify span{
+  font-weight: bolder;
+  color: black;
 }
-.themes {
-position: absolute;
-top: 15px;
-left: 85%;
-}
-.themes .current {
-  display: flex;
-  align-items: center;
-}
-.themes .green, .themes .red, .themes .blue, .themes .violet {
-width: 20px;
-height: 20px;
-border-radius: 50%;
-}
-.themes .green {
-  background-color: green;
-}
-.themes .red {
-  background-color: red;
-}
-.themes .blue {
-  background-color: blue;
-}
-.themes .violet {
-  background-color: violet;
-}
-.theme {
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--white);
-  width: 100px;
-  height: 28px;
-  padding: 5px;
-  margin-top: 5px;
-  cursor: pointer;
+.notify button{ /* mark as read buttons */
+  top: 0;
   display: none;
-  transition: all .5s ease;
+  z-index: 1;
+  width: 200px;
+  height: 100%;
+  border: 0;
 }
-.themes:hover .theme {
-  display: flex;
-}
-.hide {
-  display: none;
+.notify:hover button,
+.notify:hover button span{ /* buttons color design */
+  display: block;
+  color: white;
+	background-color: #df7630; 
 }
 
-/* HOME PAGE STYLING*/
-.home-content {
-  margin-left: 50px;
-  margin-top: 25px;
+.card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: pre-wrap;
+    text-align: justify;
 }
-.row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .row .stat {
-      padding: 20px;
-      z-index: -1;
-    }
-    .stat {
-      position: relative;
-      margin: 30px 20px;
-      width: 250px;
-    }
-    .stat div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 70px;
-      position: absolute;
-      top: -40px;
-      left: 76%;
-      border: 1px solid;
-    }
-    .stat div i {
-      font-size: 30px;
-    }
-    .search {
-      width: 200px;
-      position: relative;
-      background: var(--grey);
-    }
-    .search i {
-      position: absolute;
-      top: 10px;
-      left: 85%;
-      font-size: 20px;
-      opacity: 0.4;
-    }
-    .search input {
-       box-shadow: none !important;
-       background: var(--grey);
-    }
-    ::placeholder {
-      padding-left: 0px;
-    }
-    .table-data {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    @media screen and (max-width:768px) {
-      .table-data {
-        overflow: scroll;
-      }
-    }
-    tbody tr td:last-child {
-      position: relative;
-    }
-    tbody tr td:last-child .links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      width: 90px;
-      top: 0;
-      left: 23px;
-      background-color: var(--white);
-      z-index: 10;
-    }
-    tbody tr td:last-child .links button {
-      color: black;
-      border: none;
-      padding: 8px 5px;
-      cursor: pointer;
-      font-size: 12px;
-      width: 100%;
-      background-color: var(--white);
-      border-bottom:1px solid;
-    }
-    tbody tr td:last-child .links button:hover {
-      background-color: #ccc;
-    }
-    tbody tr td:last-child:hover .links {
-      display: flex;
-    }
-    footer h6 {
-      text-align: center;
-      margin-top: 20px;
-    }
-    /* USERS PAGE STYLING*/
-    .photo-card-container {
-      min-height: 100vh;
-    }
-    .photo-card {
-      position: relative;
-      width: 300px;
-      border: 1px solid var(--white);
-      border-radius:20px 0 20px 0;
-      background-color: var(--white);
-      cursor: pointer;
-    }
-
-    .photo-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 110px;
-      border-top-left-radius: 20px;
-      background: var(--green);
-      z-index: 0;
-    }
-    .photo-card .img-sec {
-      position: absolute;
-      top: 20px;
-      left: 75px;
-      display: grid;
-      place-items: center;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background-color: var(--white);
-    }
-    .photo-card .img-sec img {
-      width: 95%;
-      height: 95%;
-      border-radius: 50%;
-      object-fit: cover;
-      outline: 2px solid var(--green);
-      border: 2px solid var(--white);
-    }
-    .photo-card .info-sec {
-      font-weight: bold;
-      line-height: 28px;
-      margin-top: 170px;
-      padding-left: 10px;
-    }
-    .photo-card .social-links {
-      position: absolute;
-      top: 160px;
-      left: 85%;
-      display: flex;
-      flex-direction: column;
-    }
-    .photo-card .social-links i {
-      padding: 8px;
-      color: var(--green);
-      transition: all ease .5s;
-      cursor: pointer;
-    }
-    .photo-card .social-links i:hover {
-      font-size: 20px;
-    }
-
-    /* REGISTERATION PAGE */
-    .form-container {
-      background-color: var(--white);
-      width: 450px;
-      padding: 30px;
-      border-radius: 20px;
-    }
-    #form-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .register-form input {
-      box-shadow: none !important;
-    }
-    button.btn {
-      background-color: var(--green);
-      color: var(--white);
-      box-shadow: none !important;
-    }
-    .to {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 10;
-      width: 150px;
-      height: 30px;
-      border-radius: 25px;
-      background-color: var(--white);
-      animation-name: example;
-      animation-duration: 3s;
-      animation-timing-function: ease-in-out;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      visibility: hidden;
-    }
-    @keyframes example {
-      from {opacity: 1; visibility: visible;}
-      to {opacity: 0; visibility: visible;}
-    }
-    .to p {
-      padding: 0 5px;
-      text-align: center;
-      font-size: 15px;
-    }
+.details{
+  width: 77.75vw; 
+  height: 85vh; 
+  position: absolute; 
+  display: none; 
+  z-index: 1; 
+  background-color: white;
+}
+.borrow-details span{
+  color: black;
+  opacity: 60%;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
