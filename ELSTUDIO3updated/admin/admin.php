@@ -57,7 +57,14 @@
                                         <i class="bi bi-person-plus-fill me-2"></i>New Users
                                     </div> 
                                     <div> <!-- the notif badge -->
-                                        <span class="badge text-bg-danger">4</span>
+                                        <span class="badge text-bg-danger">
+                                        <?php
+                                            $sql = "SELECT * FROM users WHERE valstatus = 0;";
+                                            $result = mysqli_query($conn, $sql);
+                                            $resultChecker = mysqli_num_rows($result);
+                                            echo $resultChecker;
+                                            ?>
+                                        </span>
                                     </div>
                                 </a>
                             </li>
@@ -125,7 +132,7 @@
                                             </thead>
                                             <tbody style="vertical-align: middle;">
                                             <?php
-                                                            $sql = "SELECT * FROM users WHERE status = '1'";
+                                                            $sql = "SELECT * FROM users WHERE status = '1' AND valstatus = '0'";
                                                             if (isset($_POST['data'])) {
                                                                 $filter = $_POST['data'];
                                                                 $sql = "SELECT * FROM users WHERE Fname LIKE '%$filter%' OR Lname LIKE '%$filter%' OR id LIKE ''%$filter%'' OR  email LIKE '%$filter%'";
@@ -167,8 +174,8 @@
                                                                 <td>'.$email.'</td>
                                                                
                                                                 <td>
-                                                                <form method="get" action="includes/table.inc.php?id="'.$id.'"">
-                                                                    <button class="btn" type="button" style="background-color: #df7630; color: white;">Approve</button>
+                                                                <form method="get" action="includes/table.inc.php">
+                                                                    <button class="btn" type="submit" name="approve" value="'.$id.'" style="background-color: #df7630; color: white;">Approve</button>
                                                                     <button class="btn" type="button" style="background-color: #e14747; color: white;">No</button>
                                                                 </td>
                                                                 </form>
@@ -199,7 +206,7 @@
                                             </thead>
                                             <tbody style="vertical-align: middle;">
                                             <?php
-                                                            $sql = "SELECT * FROM users WHERE status = '2'";
+                                                            $sql = "SELECT * FROM users WHERE status = '2' AND valstatus = '0'";
                                                             if (isset($_POST['data'])) {
                                                                 $filter = $_POST['data'];
                                                                 $sql = "SELECT * FROM users WHERE Fname LIKE '%$filter%' OR Lname LIKE '%$filter%' OR id LIKE ''%$filter%'' OR  email LIKE '%$filter%'";
@@ -239,10 +246,10 @@
                                                                 <td>'.$email.'</td>
                                                                
                                                                 <td>
-                                                                <form method="get" action="includes/table.inc.php?id="'.$id.'"">
-                                                                    <button class="btn" type="button" style="background-color: #df7630; color: white;">Approve</button>
+                                                                <form method="get" action="includes/table.inc.php">
+                                                                    <button class="btn" type="submit" name="approve" value="'.$id.'" style="background-color: #df7630; color: white;">Approve</button>
                                                                     <button class="btn" type="button" style="background-color: #e14747; color: white;">No</button>
-                                                                </td>
+                                                                 </td>
                                                                 </form>
                                                                 </tr>';
                                                                 }

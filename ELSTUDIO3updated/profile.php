@@ -73,9 +73,9 @@ session_start();
                 <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="height: auto; background-color: rgba(0, 0, 0, .1);">
                     <div class="d-flex flex-column position-sticky pt-4" style="height:90vh; margin:  2vh 0 0 0;">
                         <div class="outer mx-auto d-block"> <!-- the profile pic section -->
-                        <?php
-                                    require_once 'includes/config.php';
-                                    $id = $_SESSION["id"];
+                                        <?php
+                                        require_once 'includes/config.php';
+                                        $id = $_SESSION["id"];
                                         $query = " select * from users where id = '$id'";
                                         $result = mysqli_query($conn, $query);   
                                             while ($data = mysqli_fetch_assoc($result)) {
@@ -220,7 +220,7 @@ session_start();
                                             <td>
                                                 
                                             </td>
-                                        </tr>
+                                    </tr>
                                         <tr>
                                             <td>Address</td>
                                             <td class="content w-75"><?php echo $_SESSION["address"];?></td>

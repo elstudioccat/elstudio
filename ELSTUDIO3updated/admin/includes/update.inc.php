@@ -1,14 +1,12 @@
 <?php
-
-include_once("../../includes/config.php");
-
-if(isset($_GET['approve'])){
+  include_once("../../includes/config.php");
+if(isset($_POST['approve'])){
 
   echo "sadasdas";
-
+  $id = $_POST['id'];
+  echo $id;
 
 }
-
 
 
 if (isset($_POST['update'])) {
