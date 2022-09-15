@@ -148,22 +148,7 @@
                                                                 $course = $row['course'];
                                                                 $yr = $row['year'];
                                                                 $email = $row['email'];
-                                                                    if ($row['status'] == 0){
-
-                                                                        $stats = "Pending";
-                                                                    }
-                                                                    else if ($row['status'] == 1){
-
-                                                                        $stats = "Student";
-                                                                    }
-                                                                    else if ($row['status'] == 2){
-                                                                        $stats = "Faculty";
-                                                                    }
-                                                                    else if ($row['status'] == 3){
-                                                                        $stats = "Admin";
-                                                                    }
-
-
+                                                                  
                                                                 echo '<tr>
                                                                 <td>'.$id.'</td>
                                                                 <td>'.$lName.'</td>
@@ -221,22 +206,7 @@
                                                                 $mName = $row['Mname'];
                                                                 $dprmnt = $row['dprmnt'];                                                              
                                                                 $email = $row['email'];
-                                                                    if ($row['status'] == 0){
-
-                                                                        $stats = "Pending";
-                                                                    }
-                                                                    else if ($row['status'] == 1){
-
-                                                                        $stats = "Student";
-                                                                    }
-                                                                    else if ($row['status'] == 2){
-                                                                        $stats = "Faculty";
-                                                                    }
-                                                                    else if ($row['status'] == 3){
-                                                                        $stats = "Admin";
-                                                                    }
-
-
+                                                                   
                                                                 echo '<tr>
                                                                 <td>'.$id.'</td>
                                                                 <td>'.$lName.'</td>
@@ -296,26 +266,39 @@
                                                     <th>Course</th>
                                                     <th>Year Level</th>
                                                     <th>Email</th>
-                                                    <th colspan="3">Option</th>
+                                                    <th colspan="2">Option</th>
                                                     <th>Validity Status</th>
                                                 </tr>
                                             </thead>
                                             <tbody style="vertical-align: middle;">
                                                 <tr>
-                                                    <td>201810888</td>
-                                                    <td>Surname</td>
-                                                    <td>First Name</td>
-                                                    <td>Middle Name</td>
-                                                    <td>BSCoS</td>
-                                                    <td>4th</td>
-                                                    <td>name.surname@cvsu.edu.ph</td>
+                                                <?php
+                                                    $sql = "SELECT * FROM users WHERE status = '1' AND valstatus = '1'";
+                                                            $result = mysqli_query($conn, $sql);
+                                                            $resultChecker = mysqli_num_rows($result);
+                                                            if ($resultChecker > 0) {
+                                                                while ($row = mysqli_fetch_assoc($result)) {
+                                                                $id = $row['id'];
+                                                                $lName = $row['Lname'];
+                                                                $fName = $row['Fname'];
+                                                                $mName = $row['Mname'];
+                                                                $course = $row['course'];
+                                                                $yr = $row['year'];
+                                                                $email = $row['email'];
+                                                                  
+                                                                echo '<tr>
+                                                       
+                                                                <td>'.$id.'</td>
+                                                                <td>'.$lName.'</td>
+                                                                <td>'.$fName.'</td>
+                                                                <td>'.$mName.'</td>
+                                                                <td>'.$course.'</td>
+                                                                <td>'.$yr.'</td>
+                                                                <td>'.$email.'</td>
+                                                       
+                                                  
                                                     <td>
-                                                        <button class="border-0" type="button" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#view-studentmodal">
-                                                            <i class="bi bi-eye-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="View Details" style="color:#df7630"></i>
-                                                        </button>   
-                                                    </td>
-                                                    <td>
-                                                        <button class="border-0" type="button" style="background-color: white;">
+                                                        <button class="border-0" type="button" style="background-color: white;" onclick="getdetails('.$id.')">
                                                             <i class="bi bi-pen-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"></i>
                                                         </button>
                                                     </td>
@@ -326,7 +309,14 @@
                                                     </td>
                                                     <td>
                                                         <button class="btn" type="button" style="background-color: #df7630; color: white;">Approve</button>
-                                                    </td>
+                                                    </td>'; 
+                                                  
+                                                         }
+                                                    } else {
+                                                     echo '<h1 style="color:red;">No User Found</h1>';
+                                                  }
+
+                                                ?>
                                                 </tr>
                                             </tbody>
                                         </table> 
@@ -343,28 +333,38 @@
                                                     <th>Middle Name</th>
                                                     <th>Department</th>
                                                     <th>Email</th>
-                                                    <th colspan="3">Option</th>
+                                                    <th colspan="2">Option</th>
                                                     <th>Validity Status</th>
                                                 </tr>
                                             </thead>
                                             <tbody style="vertical-align: middle;">
                                                 <tr>
-                                                    <td>201810888</td>
-                                                    <td>Surname</td>
-                                                    <td>First Name</td>
-                                                    <td>Middle Name</td>
-                                                    <td>DCS</td>
-                                                    <td>name.surname@cvsu.edu.ph</td>
+                                                <?php
+                                                    $sql = "SELECT * FROM users WHERE status = '2' AND valstatus = '1'";
+                                                            $result = mysqli_query($conn, $sql);
+                                                            $resultChecker = mysqli_num_rows($result);
+                                                            if ($resultChecker > 0) {
+                                                                while ($row = mysqli_fetch_assoc($result)) {
+                                                                $id = $row['id'];
+                                                                $lName = $row['Lname'];
+                                                                $fName = $row['Fname'];
+                                                                $mName = $row['Mname'];
+                                                                $dprmnt = $row['dprmnt'];                                                              
+                                                                $email = $row['email'];
+                                                                  
+                                                                echo '<tr>
+                                                                <td>'.$id.'</td>
+                                                                <td>'.$lName.'</td>
+                                                                <td>'.$fName.'</td>
+                                                                <td>'.$mName.'</td>
+                                                                <td>'.$dprmnt.'</td>
+                                                                <td>'.$email.'</td>
+                                                  
                                                     <td>
-                                                        <button class="border-0" type="button" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#view-facultymodal">
-                                                            <i class="bi bi-eye-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="View Details" style="color:#df7630"></i>
-                                                        </button>   
-                                                    </td>
-                                                    <td>
-                                                        <button class="border-0" type="button" style="background-color: white;">
-                                                            <i class="bi bi-pen-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"></i>
-                                                        </button>
-                                                    </td>
+                                                    <button class="border-0" type="button" style="background-color: white;" onclick="getdetailsf('.$id.')">
+                                                         <i class="bi bi-pen-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"></i>
+                                                     </button>
+                                                     </td>
                                                     <td>
                                                         <button class="border-0" type="button" style="background-color: white;">
                                                             <i class="bi bi-trash3-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete" style="color:#e14747"></i>
@@ -372,7 +372,13 @@
                                                     </td>
                                                     <td>
                                                         <button class="btn" type="button" style="background-color: #df7630; color: white;">Approve</button>
-                                                    </td>
+                                                    </td>';
+                                                         }
+                                                    } else {
+                                                     echo '<h1 style="color:red;">No User Found</h1>';
+                                                  }
+
+                                                ?>
                                                 </tr>
                                             </tbody>
                                         </table> 
@@ -388,37 +394,49 @@
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="staticBackdropLabel">View Details</h5>
                                         </div>
-            
+                                                
                                         <div class="modal-body">
                                             <div class="form-floating mb-3 border-bottom">
-                                                <input type="text" readonly class="form-control-plaintext" id="idnummber" value="Surname, First Name Middle Name">
-                                                <label for="idnumber">Name</label>
-                                            </div>
-                                            <div class="form-floating mb-3 border-bottom">
-                                                <input type="text" readonly class="form-control-plaintext" id="idnummber" value="201810888">
+                                                <input type="text" readonly class="form-control-plaintext" id="idnumber">
                                                 <label for="idnumber">ID Number</label>
                                             </div>
+                                                <div class="form-floating mb-3 border-bottom">
+                                                <input type="text"  class="form-control-plaintext" id="Fname">
+                                                <label for="Fname">Name</label>
+                                            </div>
+                                                <div class="form-floating mb-3 border-bottom">
+                                                <input type="text"  class="form-control-plaintext" id="Mname">
+                                                <label for="Mname">Middle Name</label>
+                                             </div>
+                                                <div class="form-floating mb-3 border-bottom">
+                                                <input type="text"  class="form-control-plaintext" id="Lname">
+                                                <label for="Lname">Last Name</label>
+                                            </div>
                                             <div class="form-floating mb-3 border-bottom">
-                                                <input type="text" readonly class="form-control-plaintext" id="address" value="Tanza, Cavite">
+                                                <input type="text"  class="form-control-plaintext" id="address">
                                                 <label for="address">Address</label>
                                             </div>
                                             <div class="form-floating mb-3 border-bottom">
-                                                <input type="email" readonly class="form-control-plaintext" id="email" value="name.surname@cvsu.edu.ph">
+                                                <input type="email"  class="form-control-plaintext" id="email">
                                                 <label for="email">Email</label>
                                             </div>
                                             <div class="form-floating mb-3 border-bottom">
-                                                <input type="text" readonly class="form-control-plaintext" id="course" value="Bachelor of Science in Computer Science">
+                                                <input type="text"  class="form-control-plaintext" id="course">
                                                 <label for="course">Course</label>
                                             </div>
                                             <div class="form-floating mb-3 border-bottom">
-                                                <input type="text" readonly class="form-control-plaintext" id="year" value="Fourth">
+                                                <input type="text" class="form-control-plaintext" id="year">
                                                 <label for="year">Year Level</label>
                                             </div>
                                         </div>
-            
+                                        
                                         <div class="modal-footer">
+                                            <button type="submit" class="btn border-0" onclick="updateuser()">Update</button>
                                             <button type="button" class="btn border-0" data-bs-dismiss="modal">Close</button>
+                                            <input type="hidden" id="hiddendata">
                                         </div>
+                                    
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -432,30 +450,41 @@
                                         </div>
             
                                         <div class="modal-body">
-                                            <div class="form-floating mb-3 border-bottom">
-                                                <input type="text" readonly class="form-control-plaintext" id="idnummber" value="Surname, First Name Middle Name">
-                                                <label for="idnumber">Name</label>
-                                            </div>
-                                            <div class="form-floating mb-3 border-bottom">
-                                                <input type="text" readonly class="form-control-plaintext" id="idnummber" value="201810888">
+                                        <div class="form-floating mb-3 border-bottom">
+                                                <input type="text" readonly class="form-control-plaintext" id="idnumbers">
                                                 <label for="idnumber">ID Number</label>
                                             </div>
+                                                <div class="form-floating mb-3 border-bottom">
+                                                <input type="text" class="form-control-plaintext" id="Fnames">
+                                                <label for="idnumber">Name</label>
+                                            </div>
+                                                <div class="form-floating mb-3 border-bottom">
+                                                <input type="text" class="form-control-plaintext" id="Mnames">
+                                                <label for="idnumber">Middle Name</label>
+                                             </div>
+                                                <div class="form-floating mb-3 border-bottom">
+                                                <input type="text" class="form-control-plaintext" id="Lnames">
+                                                <label for="idnumber">Last Name</label>
+                                            </div>
                                             <div class="form-floating mb-3 border-bottom">
-                                                <input type="text" readonly class="form-control-plaintext" id="address" value="Tanza, Cavite">
+                                                <input type="text" class="form-control-plaintext" id="addresss">
                                                 <label for="address">Address</label>
                                             </div>
                                             <div class="form-floating mb-3 border-bottom">
-                                                <input type="email" readonly class="form-control-plaintext" id="email" value="name.surname@cvsu.edu.ph">
+                                                <input type="email" class="form-control-plaintext" id="emails">
                                                 <label for="email">Email</label>
                                             </div>
+    
                                             <div class="form-floating mb-3 border-bottom">
-                                                <input type="text" readonly class="form-control-plaintext" id="course" value="Department of Computer Studies">
-                                                <label for="course">Department</label>
+                                                <input type="text" class="form-control-plaintext" id="dprmnt">
+                                                <label for="dprmnt">Department</label>
                                             </div>
                                         </div>
             
                                         <div class="modal-footer">
+                                            <button type="submit" class="btn border-0" onclick="updateuserf()">Update</button>
                                             <button type="button" class="btn border-0" data-bs-dismiss="modal">Close</button>
+                                            <input type="hidden" id="hiddendatas">
                                         </div>
                                     </div>
                                 </div>
@@ -562,4 +591,108 @@
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+    function getdetails(updateid){
+        $('#hiddendata').val(updateid);
+
+        $.post("includes/update.inc.php",{updateid:updateid},function(data,status){
+
+            var userid=JSON.parse(data);
+            $('#idnumber').val(userid.id);
+            $('#Fname').val(userid.Fname);
+            $('#Mname').val(userid.Mname);
+            $('#Lname').val(userid.Lname);
+            $('#address').val(userid.address);
+            $('#course').val(userid.course);
+            $('#year').val(userid.year);
+            $('#email').val(userid.email);
+           
+
+        });
+        $('#view-studentmodal').modal('show'); 
+    }
+
+
+    function getdetailsf(updateid){
+        $('#hiddendata').val(updateid);
+
+        $.post("includes/update.inc.php",{updateid:updateid},function(data,status){
+
+            var userid=JSON.parse(data);
+            $('#idnumbers').val(userid.id);
+            $('#Fnames').val(userid.Fname);
+            $('#Mnames').val(userid.Mname);
+            $('#Lnames').val(userid.Lname);
+            $('#addresss').val(userid.address);
+            $('#emails').val(userid.email);
+            $('#dprmnt').val(userid.dprmnt);
+
+        });
+        $('#view-facultymodal').modal('show'); 
+    }
+
+
+
+
+
+
+    function updateuser(){
+        var Fname =  $('#Fname').val();
+        var Mname =  $('#Mname').val();
+        var Lname =  $('#Lname').val();
+        var address =  $('#address').val();
+        var course =  $('#course').val();
+        var year =  $('#year').val();
+        var email =  $('#email').val();
+        var hiddendata =  $('#hiddendata').val();
+
+        $.post("includes/update.inc.php",
+        {Fname:Fname,
+            Mname:Mname,
+            Lname:Lname,
+            address:address,
+            course:course,
+            year:year,
+            email:email,
+            hiddendata,hiddendata
+         },function(data,status){
+            $('#view-studentmodal').modal('hide'); 
+         });
+
+        
+    }
+
+
+
+    function updateuserf(){
+        var Fnames =  $('#Fnames').val();
+        var Mnames =  $('#Mnames').val();
+        var Lnames =  $('#Lnames').val();
+        var addresss =  $('#addresss').val();
+        var dprmnt =  $('#dprmnt').val();
+        var emails =  $('#emails').val();
+        var hiddendatas =  $('#idnumbers').val();
+
+        $.post("includes/update.inc.php",
+        {Fnames:Fnames,
+            Mnames:Mnames,
+            Lnames:Lnames,
+            addresss:addresss,
+            dprmnt:dprmnt,
+            emails:emails,
+            hiddendatas,hiddendatas
+         },function(data,status){
+            alert(hiddendatas);
+            $('#view-facultymodal').modal('hide'); 
+         });
+
+        
+    }
+
+
+</script>
+
+<script>
+
+
 </script>
